@@ -1,0 +1,16 @@
+.square {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  /* background-image: linear-gradient(to bottom right, #AA0505, #B97D10); */
+  border: 2px solid black;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.square-text {
+  justify-content: center;
+  align-self: center;
+  color: #FFFFFF;
+}

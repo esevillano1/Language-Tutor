@@ -1,0 +1,5 @@
+.languages {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 50px auto;
+}
