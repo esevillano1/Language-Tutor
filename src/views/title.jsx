@@ -1,5 +1,10 @@
 import React from 'react';
+
+// Import functional components here
 import Languages from './languages.jsx';
+import Menubar from './menubar.jsx';
+
+// Import stylesheets here
 import '../styling/languages.css';
 
 function Title() {
@@ -53,7 +58,9 @@ function Title() {
 
   return(
     <div>
-      <h1>{title}</h1>
+      <div>
+        <Menubar title={title} />
+      </div>
       <div>
         {languageList}
       </div>
