@@ -6,11 +6,16 @@ var read = require("./read");
 var languageSchema = require('./schema');
 
 // Name of DB and Collection
-var dbName = process.env.DB_NAME;
-var collection = process.env.DB_COLLECTION;
+const dbUser = process.env.DB_USER;
+const dbPassword = process.env.DB_PASSWORD;
+const dbName = process.env.DB_NAME;
+const collection = process.env.DB_COLLECTION;
 
 // Initial connection will be a localhost connection
-const MONGODB_URI = process.env.DB_KEY.replace("DB_USER", process.env.DB_USER).replace("DB_PASSWORD", process.env.DB_PASSWORD).replace("DB_NAME", dbName);
+const MONGODB_URI = process.env.DB_KEY
+                        .replace("DB_USER", dbUser)
+                        .replace("DB_PASSWORD", dbPassword)
+                        .replace("DB_NAME", dbName);
 
 async function mainConnection(){
     await mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
