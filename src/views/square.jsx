@@ -18,29 +18,20 @@ function LanguageSquareButton(props) {
   // TODO: Remove this console.log statement after being done with the implementation
   console.log("Language Square Button Name - " + languageName);
 
-  // let gradientStyle = {
-  //   background: {`linear-gradient(to bottom right, this.props.language.language.language.left, this.props.language.language.language.right`},
-  //   color: "#000000"
-  // };
-
   return(
-    <div
-      className="square"
-      // Since the props are already inside braces, each doesn't need their own brace to access the info
-      style={{
-        background: "linear-gradient(to bottom right," + props.language.language.language.left + "," + props.language.language.language.right + ")"
-        // background: "linear-gradient(to bottom right, #FF0000, #00FF00)"
-      }}
-    >
-      <span
-        className="square-text"
+    <div className="square"
+        // Since the props are already inside braces, each doesn't need their own brace to access the info
         style={{
-          color: "#FFFFFF"
+          background: "linear-gradient(to bottom right," + props.language.language.language.left + "," + props.language.language.language.right + ")"
+          // background: "linear-gradient(to bottom right, #FF0000, #00FF00)"
         }}
       >
-        {languageName}
-      </span>
-    </div>
+        <a href={languageName} className="language-link">
+          <span className="square-text">
+            {languageName}
+          </span>
+        </a>
+      </div>
   );
 }
 
