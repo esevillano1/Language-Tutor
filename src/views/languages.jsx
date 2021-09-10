@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../styling/languages.css';
 import LanguageSquare from './square.jsx';
 import PropTypes from "prop-types";

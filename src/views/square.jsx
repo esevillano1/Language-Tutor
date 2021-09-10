@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styling/square.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Language from './language.jsx';
 
 function LanguageSquare(props) {
   let languages = props;
@@ -15,8 +17,7 @@ function LanguageSquare(props) {
 
 function LanguageSquareButton(props) {
   let languageName = props.language.language.language.name;
-  // TODO: Remove this console.log statement after being done with the implementation
-  console.log("Language Square Button Name - " + languageName);
+  let path = "/" + languageName;
 
   return(
     <div className="square"
@@ -26,11 +27,12 @@ function LanguageSquareButton(props) {
           // background: "linear-gradient(to bottom right, #FF0000, #00FF00)"
         }}
       >
-        <a href={languageName} className="language-link">
-          <span className="square-text">
-            {languageName}
-          </span>
-        </a>
+        <Link to={path} className="language-link square-text">{languageName}</Link>
+        {/* Need a router component to coordinate all the routes that can be defined with the languages
+        <Router>
+          <Link to={path} className="language-link square-text">{languageName}</Link>
+          <Route path={path} component={Language} />
+        </Router> */}
       </div>
   );
 }

@@ -11,8 +11,6 @@ function Title() {
 
   let title = "Language Tutor";
 
-  const languagesPerRow = 4;
-
   const languages = [
     {
       'name': 'English',
